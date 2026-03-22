@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gesture Flappy Bird</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <h1>Gesture Flappy Bird</h1>
+
+  <div class="game-card">
+
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+    <div id="startScreen" class="overlay">
+      <h2>FLAPPY BIRD</h2>
+      <button id="startBtn">START</button>
+    </div>
+
+    <div id="gameOverScreen" class="overlay hidden">
+      <h2>GAME OVER</h2>
+      <p id="finalScore"></p>
+      <button id="restartBtn">PLAY AGAIN</button>
+    </div>
+
+  </div>
+
+  <div class="camera-panel">
+
+    <h3>Gesture Detection</h3>
+
+    <div class="camera-wrapper">
+      <video id="webcam" autoplay playsinline></video>
+      <canvas id="handCanvas"></canvas>
+    </div>
+
+    <p>Gesture: <span id="gestureStatus">Idle</span></p>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="js/camera.js"></script>
+  <script src="js/game.js"></script>
+
+</body>
+
+</html>
