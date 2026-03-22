@@ -32,7 +32,7 @@ app.add_middleware(
 )
 
 model = GestureNet()
-model.load_state_dict(torch.load("../ml/gesture_model.pth", map_location=torch.device("cpu")))
+model.load_state_dict(torch.load("gesture_model.pth", map_location=torch.device("cpu")))
 model.eval() # Set the model to evaluation mode, which disables features like dropout and batch normalization that are only used during training.
 
 # Define the input data model for the /predict endpoint
