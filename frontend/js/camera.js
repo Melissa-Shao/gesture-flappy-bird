@@ -30,9 +30,15 @@ hands.setOptions({
 
 hands.onResults(onResults);
 
+const API_BASE_URL =
+  window.location.hostname === "127.0.0.1" ||
+  window.location.hostname === "localhost"
+    ? "http://127.0.0.1:8000"
+    : "https://gesture-flappy-bird.onrender.com";
+
 async function predictGesture(flatLandmarks) {
   try {
-    const response = await fetch("http://127.0.0.1:8000/predict", {
+    const response = await fetch(`${API_BASE_URL}/predict`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
