@@ -13,7 +13,7 @@ let lastPredictedGesture = "idle";
 let lastJumpTime = 0;
 const jumpCooldown = 300; // ms
 let lastPredictTime = 0;
-const predictInterval = 120; // ms
+const predictInterval = 60; // ms
 
 const hands = new Hands({
   locateFile: (file) => {
