@@ -83,7 +83,7 @@ The project demonstrates the integration of **machine learning, real-time video 
 👉 **Play the game online:**  
 https://gesture-flappy-bird.netlify.app/
 
-*(Use Google Chrome broswer and allow camera access for gesture detection)*
+*(Use Google Chrome browser and allow camera access for gesture detection)*
 
 ---
 
